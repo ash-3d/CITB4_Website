@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CITB4 - Thermal Simulation</title>
+    <title>Technology - CITB4 Thermal Simulation</title>
     <!-- Link to the external stylesheet -->
-    <link rel="stylesheet" href="src/assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
     <!-- Link to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,7 +20,7 @@
       <div class="header-container">
         <div class="logo-container">
           <!-- The logo image. Assumes it's in an 'images' folder. -->
-          <img src="images/logo.png" alt="CITB4 Logo" class="logo" />
+          <img src="../../images/logo.png" alt="CITB4 Logo" class="logo" />
           <h1>CITB4</h1>
         </div>
         <!-- Hamburger menu button for mobile -->
@@ -32,8 +32,8 @@
         <!-- Main navigation menu -->
         <nav class="main-nav" id="main-nav">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="src/pages/technology.html">Technology</a></li>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="technology.html">Technology</a></li>
             <li>
               <a
                 href="https://www.fiverr.com"
@@ -72,7 +72,7 @@
                   /></svg
               ></a>
             </li>
-            <li><a href="src/pages/contact.html">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -81,51 +81,66 @@
     <!-- Main content area of the page -->
     <main class="main-content">
       <div class="content-container">
-        <!-- Introduction section -->
+        <!-- Page title section -->
         <section class="intro">
-          <h2>
-            Affordable thermal simulation for FFF/material extrusion users and
-            its ecosystem
-          </h2>
+          <h2>Our Technology</h2>
+          <p>
+            CITB4 leverages advanced computational methods to deliver fast,
+            accurate thermal simulations for FFF/material extrusion processes.
+          </p>
         </section>
 
-        <!-- Images section -->
-        <section class="images-section">
-          <img src="images/pic1.jpg" alt="Thermal simulation example 1" />
-          <img src="images/pic2.jpg" alt="Thermal simulation example 2" />
-          <img src="images/pic3.jpg" alt="Thermal simulation example 3" />
+        <!-- Core Technology section -->
+        <section class="content-box">
+          <h3>Core Simulation Engine</h3>
+          <p>
+            Our proprietary thermal simulation engine combines the best of both
+            worlds:
+          </p>
+          <ul>
+            <li>
+              <strong>Physics-based modeling:</strong> Accurate heat transfer
+              calculations including conduction, convection, and radiation
+            </li>
+            <li>
+              <strong>Machine learning optimization:</strong> AI-enhanced
+              predictions for complex geometries
+            </li>
+            <li>
+              <strong>Real-time processing:</strong> Results in minutes, not
+              hours
+            </li>
+            <li>
+              <strong>Cloud-native architecture:</strong> Scale computing
+              resources based on your needs
+            </li>
+          </ul>
         </section>
 
-        <!-- Wrapper for the two column layout -->
-        <div class="features-wrapper">
-          <!-- Features section -->
-          <section class="content-box">
-            <h3>Why CITB4?</h3>
-            <ul>
-              <li>Fast and computationally efficient</li>
-              <li>Accuracy similar to a FEA based simulation</li>
-            </ul>
-          </section>
-
-          <!-- Benefits section -->
-          <section class="content-box">
-            <h3>Why should you simulate?</h3>
-            <ul>
-              <li>Print first time right. Less waste.</li>
-              <li>Get better process awareness before you start the print.</li>
-              <li>Understand overheating / under-heating</li>
-              <li>Predict the chance for deformation and warpping*</li>
-              <li>An add-on for the QA report</li>
-            </ul>
-          </section>
-        </div>
-
-        <!-- Video section -->
-        <section class="video-section">
-          <video controls autoplay muted loop>
-            <source src="video/landing_vid.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+        <!-- Technical Features section -->
+        <section class="content-box">
+          <h3>Technical Capabilities</h3>
+          <div class="features-wrapper">
+            <div class="tech-feature">
+              <h4>Material Database</h4>
+              <ul>
+                <li>Pre-configured profiles for PLA, ABS, PETG, TPU, Nylon</li>
+                <li>Custom material property input</li>
+                <li>Temperature-dependent material properties</li>
+                <li>Thermal history tracking</li>
+              </ul>
+            </div>
+            <div class="tech-feature">
+              <h4>Analysis Types</h4>
+              <ul>
+                <li>Layer-by-layer thermal analysis</li>
+                <li>Cooling rate predictions</li>
+                <li>Warpage risk assessment</li>
+                <li>Overheating detection</li>
+                <li>Support structure thermal impact</li>
+              </ul>
+            </div>
+          </div>
         </section>
       </div>
     </main>
@@ -133,10 +148,8 @@
     <!-- Footer section with legal links -->
     <footer class="site-footer">
       <div class="footer-container">
-        <a href="src/pages/impressum.html">Imprint/ Impressum</a>
-        <a href="src/pages/datenschutz.html"
-          >Privacy policy/ datenschutzerklarung</a
-        >
+        <a href="impressum.html">Imprint/ Impressum</a>
+        <a href="datenschutz.html">Privacy policy/ datenschutzerklarung</a>
       </div>
     </footer>
 
