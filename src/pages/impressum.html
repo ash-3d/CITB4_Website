@@ -98,11 +98,17 @@
       </div>
     </main>
 
-    <footer class="site-footer">
-      <div class="footer-container">
-        <a href="impressum.html">Imprint/ Impressum</a>
-        <a href="datenschutz.html">Privacy policy/ datenschutzerklarung</a>
-      </div>
-    </footer>
+    <!-- Footer will be loaded here -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+      // Load footer component
+      fetch('../components/footer-subpages.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
+    </script>
   </body>
 </html>

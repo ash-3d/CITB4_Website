@@ -145,15 +145,19 @@
       </div>
     </main>
 
-    <!-- Footer section with legal links -->
-    <footer class="site-footer">
-      <div class="footer-container">
-        <a href="impressum.html">Imprint/ Impressum</a>
-        <a href="datenschutz.html">Privacy policy/ datenschutzerklarung</a>
-      </div>
-    </footer>
+    <!-- Footer will be loaded here -->
+    <div id="footer-placeholder"></div>
 
     <!-- JavaScript for hamburger menu -->
+    <script>
+      // Load footer component
+      fetch('../components/footer-subpages.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
+    </script>
     <script>
       const hamburger = document.getElementById("hamburger");
       const mainNav = document.getElementById("main-nav");

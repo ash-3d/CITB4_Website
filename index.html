@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CITB4 - Thermal Simulation</title>
     <!-- Link to the external stylesheet -->
-    <link rel="stylesheet" href="src/assets/css/style.css" />
+    <link rel="stylesheet" href="src/style.css" />
     <!-- Link to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -91,9 +91,28 @@
 
         <!-- Images section -->
         <section class="images-section">
-          <img src="images/pic1.jpg" alt="Thermal simulation example 1" />
-          <img src="images/pic2.jpg" alt="Thermal simulation example 2" />
-          <img src="images/pic3.jpg" alt="Thermal simulation example 3" />
+          <!-- Desktop view: 3 images side by side -->
+          <div class="desktop-images">
+            <img src="images/pic1.jpg" alt="Thermal simulation example 1" />
+            <img src="images/pic2.jpg" alt="Thermal simulation example 2" />
+            <img src="images/pic3.jpg" alt="Thermal simulation example 3" />
+          </div>
+          
+          <!-- Mobile view: slideshow -->
+          <div class="mobile-slideshow">
+            <div class="slideshow-container">
+              <div class="main-image">
+                <img id="current-image" src="images/pic1.jpg" alt="Thermal simulation example 1" />
+                <button class="nav-btn prev-btn" id="prev-btn" aria-label="Previous image">❮</button>
+                <button class="nav-btn next-btn" id="next-btn" aria-label="Next image">❯</button>
+              </div>
+              <div class="thumbnails">
+                <img class="thumbnail active" data-index="0" src="images/pic1.jpg" alt="Thumbnail 1" />
+                <img class="thumbnail" data-index="1" src="images/pic2.jpg" alt="Thumbnail 2" />
+                <img class="thumbnail" data-index="2" src="images/pic3.jpg" alt="Thumbnail 3" />
+              </div>
+            </div>
+          </div>
         </section>
 
         <!-- Wrapper for the two column layout -->
@@ -130,17 +149,19 @@
       </div>
     </main>
 
-    <!-- Footer section with legal links -->
-    <footer class="site-footer">
-      <div class="footer-container">
-        <a href="src/pages/impressum.html">Imprint/ Impressum</a>
-        <a href="src/pages/datenschutz.html"
-          >Privacy policy/ datenschutzerklarung</a
-        >
-      </div>
-    </footer>
+    <!-- Footer will be loaded here -->
+    <div id="footer-placeholder"></div>
 
-    <!-- JavaScript for hamburger menu -->
+    <!-- JavaScript for hamburger menu and slideshow -->
+    <script>
+      // Load footer component
+      fetch('src/components/footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
+    </script>
     <script>
       const hamburger = document.getElementById("hamburger");
       const mainNav = document.getElementById("main-nav");
@@ -158,6 +179,101 @@
           mainNav.classList.remove("active");
         });
       });
+
+      // Slideshow functionality
+      const images = [
+        { src: "images/pic1.jpg", alt: "Thermal simulation example 1" },
+        { src: "images/pic2.jpg", alt: "Thermal simulation example 2" },
+        { src: "images/pic3.jpg", alt: "Thermal simulation example 3" }
+      ];
+      
+      let currentIndex = 0;
+      const currentImage = document.getElementById("current-image");
+      const thumbnails = document.querySelectorAll(".thumbnail");
+      const prevBtn = document.getElementById("prev-btn");
+      const nextBtn = document.getElementById("next-btn");
+
+      function updateImage(index) {
+        currentIndex = index;
+        currentImage.src = images[index].src;
+        currentImage.alt = images[index].alt;
+        
+        // Update thumbnail active state
+        thumbnails.forEach((thumb, i) => {
+          thumb.classList.toggle("active", i === index);
+        });
+      }
+
+      function nextImage() {
+        const nextIndex = (currentIndex + 1) % images.length;
+        updateImage(nextIndex);
+      }
+
+      function prevImage() {
+        const prevIndex = (currentIndex - 1 + images.length) % images.length;
+        updateImage(prevIndex);
+      }
+
+      // Button event listeners
+      if (nextBtn) nextBtn.addEventListener("click", nextImage);
+      if (prevBtn) prevBtn.addEventListener("click", prevImage);
+
+      // Thumbnail click handlers
+      thumbnails.forEach((thumb, index) => {
+        thumb.addEventListener("click", () => updateImage(index));
+      });
+
+      // Touch/swipe functionality
+      let startX = 0;
+      let startY = 0;
+      let endX = 0;
+      let endY = 0;
+
+      const mainImageContainer = document.querySelector(".main-image");
+      
+      if (mainImageContainer) {
+        mainImageContainer.addEventListener("touchstart", (e) => {
+          startX = e.touches[0].clientX;
+          startY = e.touches[0].clientY;
+        }, { passive: true });
+
+        mainImageContainer.addEventListener("touchend", (e) => {
+          endX = e.changedTouches[0].clientX;
+          endY = e.changedTouches[0].clientY;
+          handleSwipe();
+        }, { passive: true });
+
+        function handleSwipe() {
+          const deltaX = endX - startX;
+          const deltaY = endY - startY;
+          const minSwipeDistance = 50;
+
+          // Only process horizontal swipes (ignore vertical scrolling)
+          if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > minSwipeDistance) {
+            if (deltaX > 0) {
+              // Swipe right - go to previous image
+              prevImage();
+            } else {
+              // Swipe left - go to next image
+              nextImage();
+            }
+          }
+        }
+
+        // Keyboard navigation
+        document.addEventListener("keydown", (e) => {
+          // Only handle keys if slideshow is visible (mobile)
+          if (window.innerWidth <= 768) {
+            if (e.key === "ArrowLeft") {
+              e.preventDefault();
+              prevImage();
+            } else if (e.key === "ArrowRight") {
+              e.preventDefault();
+              nextImage();
+            }
+          }
+        });
+      }
     </script>
   </body>
 </html>
