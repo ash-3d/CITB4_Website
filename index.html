@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CITB4 - Thermal Simulation</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header section containing the logo and navigation -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo-container">
+                <!-- The logo image. Assumes it's in an 'images' folder. -->
+                <img src="images/logo.png" alt="CITB4 Logo" class="logo">
+                <h1>CITB4</h1>
+            </div>
+            <!-- Hamburger menu button for mobile -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <!-- Main navigation menu -->
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="https://www.fiverr.com" target="_blank" rel="noopener noreferrer" class="external-link">Order service via fiverr <svg class="external-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.5 7.5V10.5H1.5V1.5H4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 4V1H8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content area of the page -->
+    <main class="main-content">
+        <div class="content-container">
+            <!-- Introduction section -->
+            <section class="intro">
+                <h2>Affordable thermal simulation for FFF/material extrusion users and its ecosystem</h2>
+            </section>
+
+            <!-- Images section -->
+            <section class="images-section">
+                <img src="images/pic1.webp" alt="Thermal simulation example 1">
+                <img src="images/pic2.avif" alt="Thermal simulation example 2">
+                <img src="images/pic3.avif" alt="Thermal simulation example 3">
+            </section>
+
+            <!-- Wrapper for the two column layout -->
+            <div class="features-wrapper">
+                <!-- Features section -->
+                <section class="content-box">
+                    <h3>Why CITB4?</h3>
+                    <ul>
+                        <li>Fast and computationally efficient</li>
+                        <li>Accuracy similar to a FEA based simulation</li>
+                    </ul>
+                </section>
+
+                <!-- Benefits section -->
+                <section class="content-box">
+                    <h3>Why should you simulate?</h3>
+                    <ul>
+                        <li>Print first time right. Less waste.</li>
+                        <li>Get better process awareness before you start the print.</li>
+                        <li>Understand overheating / under-heating</li>
+                        <li>Predict the chance for deformation and warpping*</li>
+                        <li>An add-on for the QA report</li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- Video section -->
+            <section class="video-section">
+                <video controls autoplay muted loop>
+                    <source src="video/landing_vid.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer section with legal links -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <a href="impressum.html">Imprint/ Impressum</a>
+            <a href="datenschutz.html">Privacy policy/ datenschutzerklarung</a>
+        </div>
+    </footer>
+
+    <!-- JavaScript for hamburger menu -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mainNav = document.getElementById('main-nav');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mainNav.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        const navLinks = mainNav.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mainNav.classList.remove('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
+
