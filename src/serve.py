@@ -12,7 +12,7 @@ server = Server()
 
 # Watch the main HTML, CSS, and JS files, and the images directory
 server.watch('../../index.html', shell('echo "index.html changed"'))
-server.watch('../assets/css/style.css', shell('echo "style.css changed"'))
+server.watch('../style.css', shell('echo "style.css changed"'))
 server.watch('../pages/', shell('echo "pages changed"'))
 server.watch('../../images/', shell('echo "images changed"'))
 server.watch('../../video/', shell('echo "video changed"'))
