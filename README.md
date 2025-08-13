@@ -1,6 +1,6 @@
 # CITB4_Website
 
-A modern, responsive website for CITB4 - Thermal Simulation services. This website showcases thermal simulation capabilities, technology solutions, and provides contact information for potential clients.
+A modern, responsive website for CITB4(now Phoenix Simulation) - Thermal Simulation service. This website showcases thermal simulation capabilities, technology solutions, and provides contact information for potential clients.
 
 ## 🚀 Features
 
@@ -8,7 +8,6 @@ A modern, responsive website for CITB4 - Thermal Simulation services. This websi
 - **Modern UI/UX**: Clean, professional interface with smooth animations
 - **Video Background**: Engaging landing page with video background
 - **Component-based Structure**: Modular HTML components for easy maintenance
-- **Contact Forms**: Integrated contact functionality
 - **Legal Pages**: GDPR-compliant privacy policy and impressum
 - **Live Development Server**: Hot-reload development environment
 
@@ -175,7 +174,7 @@ The website is fully responsive and optimized for:
 
 ### Main Pages
 - **index.html**: Landing page with video background and service overview
-- **contact.html**: Contact form and company information
+- **contact.html**: Contact details and company information
 - **technology.html**: Technology showcase and capabilities
 
 ### Legal Pages
@@ -216,7 +215,7 @@ uv run --python 3.13 src/serve.py
 ### Deployment Checklist
 - [ ] All images optimized
 - [ ] Videos compressed and web-ready
-- [ ] Contact forms functional
+- [ ] Contact details functional
 - [ ] Legal pages updated
 - [ ] Meta tags and SEO optimized
 - [ ] Analytics tracking added (if required)
@@ -269,11 +268,6 @@ For technical questions or support regarding this website:
 - **Cumulative Layout Shift**: < 0.1
 - **Mobile Performance Score**: > 90
 
-### Monitoring Tools
-- Google Analytics (if implemented)
-- Google Search Console
-- Lighthouse CI
-- WebPageTest.org
 
 ## 🔒 Security Considerations
 
@@ -291,6 +285,5 @@ For technical questions or support regarding this website:
 
 ---
 
-**Last Updated**: January 2025  
+**Last Updated**: 13 August 2025  
 **Version**: 1.0.0  
-**License**: [Specify your license]
