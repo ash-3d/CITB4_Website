@@ -1,4 +1,5 @@
 # CITB4_Website
+(was renamed to Phoenix simulation)
 
 A modern, responsive website for CITB4(now Phoenix Simulation) - Thermal Simulation service. This website showcases thermal simulation capabilities, technology solutions, and provides contact information for potential clients.
 
@@ -230,7 +231,7 @@ Each page should include:
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Your page description">
 <meta name="keywords" content="thermal, simulation, engineering">
-<meta name="author" content="CITB4">
+<meta name="author" content="Phoenix simulation">
 ```
 
 ### Performance Optimization
