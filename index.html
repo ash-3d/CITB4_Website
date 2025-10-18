@@ -21,7 +21,7 @@
         <a href="index.html" class="logo-container">
           <!-- The logo image. Assumes it's in an 'images' folder. -->
           <img src="images/logo.png" alt="CITB4 Logo" class="logo" />
-          <h1>CITB4</h1>
+          <h1>Phoenix Simulation</h1>
         </a>
         <!-- Hamburger menu button for mobile -->
         <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
@@ -93,23 +93,23 @@
         <section class="images-section">
           <!-- Desktop view: 3 images side by side -->
           <div class="desktop-images">
-            <img src="images/pic1.jpg" alt="Thermal simulation example 1" />
-            <img src="images/pic2.jpg" alt="Thermal simulation example 2" />
-            <img src="images/pic3.jpg" alt="Thermal simulation example 3" />
+            <img src="images/pic1.png" alt="Thermal simulation example 1" />
+            <img src="images/pic2.png" alt="Thermal simulation example 2" />
+            <img src="images/pic3.png" alt="Thermal simulation example 3" />
           </div>
           
           <!-- Mobile view: slideshow -->
           <div class="mobile-slideshow">
             <div class="slideshow-container">
               <div class="main-image">
-                <img id="current-image" src="images/pic1.jpg" alt="Thermal simulation example 1" />
+                <img id="current-image" src="images/pic1.png" alt="Thermal simulation example 1" />
                 <button class="nav-btn prev-btn" id="prev-btn" aria-label="Previous image">❮</button>
                 <button class="nav-btn next-btn" id="next-btn" aria-label="Next image">❯</button>
               </div>
               <div class="thumbnails">
-                <img class="thumbnail active" data-index="0" src="images/pic1.jpg" alt="Thumbnail 1" />
-                <img class="thumbnail" data-index="1" src="images/pic2.jpg" alt="Thumbnail 2" />
-                <img class="thumbnail" data-index="2" src="images/pic3.jpg" alt="Thumbnail 3" />
+                <img class="thumbnail active" data-index="0" src="images/pic1.png" alt="Thumbnail 1" />
+                <img class="thumbnail" data-index="1" src="images/pic2.png" alt="Thumbnail 2" />
+                <img class="thumbnail" data-index="2" src="images/pic3.png" alt="Thumbnail 3" />
               </div>
             </div>
           </div>
@@ -182,9 +182,9 @@
 
       // Slideshow functionality
       const images = [
-        { src: "images/pic1.jpg", alt: "Thermal simulation example 1" },
-        { src: "images/pic2.jpg", alt: "Thermal simulation example 2" },
-        { src: "images/pic3.jpg", alt: "Thermal simulation example 3" }
+        { src: "images/pic1.png", alt: "Thermal simulation example 1" },
+        { src: "images/pic2.png", alt: "Thermal simulation example 2" },
+        { src: "images/pic3.png", alt: "Thermal simulation example 3" }
       ];
       
       let currentIndex = 0;
