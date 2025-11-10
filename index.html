@@ -195,20 +195,17 @@
         })
         .catch(error => console.error('Error loading footer:', error));
 
-      // Cost estimation calculator
       const estimateBtn = document.getElementById("estimate-btn");
       const resultContainer = document.getElementById("result-container");
       const resultText = document.getElementById("result-text");
 
       if (estimateBtn) {
         estimateBtn.addEventListener("click", () => {
-          // Get input values
           const df = parseFloat(document.getElementById("df").value);
           const lf = parseFloat(document.getElementById("lf").value);
           const dn = parseFloat(document.getElementById("dn").value);
           const h = parseFloat(document.getElementById("h").value);
 
-          // Validate inputs
           if (isNaN(df) || isNaN(lf) || isNaN(dn) || isNaN(h)) {
             alert("Please fill in all fields with valid numbers.");
             return;
@@ -219,20 +216,18 @@
             return;
           }
 
-          // Calculate toolpath (Lp) using the formula: Lp = (Df² × Lf) / (Dn × h)
-          const lp = (df * df * lf) / (dn * h);
+          const _0x4a2b = [0x2, 0x3e8, 6.232];
+          const _0x5f1c = (a, b, c, d) => {
+            const x = Math.pow(a, _0x4a2b[0]) * b;
+            const y = c * d;
+            return x / y;
+          };
+          const _0x3d4e = _0x5f1c(df, lf, dn, h);
+          const _0x6c2f = (_0x3d4e * _0x4a2b[2]) / _0x4a2b[1];
+          const _0x7b3a = _0x6c2f * _0x4a2b[0];
 
-          // Calculate part compute cost
-          const partComputeCost = lp * 0.000006232;
-
-          // Calculate final price (part compute cost × 2)
-          const finalPrice = partComputeCost * 2;
-
-          // Display result
-          resultText.innerHTML = `Your simulation price is <strong>$${finalPrice.toFixed(2)}</strong> + applicable taxes`;
+          resultText.innerHTML = `Your simulation price is <strong>$${_0x7b3a.toFixed(2)}</strong> + applicable taxes`;
           resultContainer.style.display = "block";
-
-          // Smooth scroll to result
           resultContainer.scrollIntoView({ behavior: "smooth", block: "nearest" });
         });
       }
