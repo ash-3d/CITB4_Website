@@ -1,7 +1,7 @@
 # CITB4_Website
-(was renamed to Phoenix simulation)
+(was renamed to Phoenix Simulation)
 
-A modern, responsive website for CITB4(now Phoenix Simulation) - Thermal Simulation service. This website showcases thermal simulation capabilities, technology solutions, and provides contact information for potential clients.
+ A modern, responsive website for CITB4 (now Phoenix Simulation), a thermal simulation service. This site showcases thermal simulation capabilities, technology solutions, and contact information for prospective clients.
 
 ## 🚀 Features
 
@@ -9,7 +9,7 @@ A modern, responsive website for CITB4(now Phoenix Simulation) - Thermal Simulat
 - **Modern UI/UX**: Clean, professional interface with smooth animations
 - **Video Background**: Engaging landing page with video background
 - **Component-based Structure**: Modular HTML components for easy maintenance
-- **Legal Pages**: GDPR-compliant privacy policy and impressum
+- **Legal Pages**: GDPR-compliant privacy policy and Impressum
 - **Live Development Server**: Hot-reload development environment
 
 ## 📁 Project Structure
@@ -94,7 +94,7 @@ CITB4_Website/
 1. **Live Reload**: The development server automatically reloads when files change
 2. **File Organization**: Keep components in `src/components/` and pages in `src/pages/`
 3. **Asset Management**: Place images in `images/` and videos in `video/`
-4. **Styling**: All styles are in `src/style.css` - consider component-specific CSS for larger projects
+4. **Styling**: All styles are in `src/style.css`—consider component-specific CSS for larger projects
 
 ## 📱 Responsive Design
 
@@ -201,7 +201,7 @@ uv run --python 3.13 src/serve.py
 ## 🌐 Deployment
 
 ### Static Hosting Options
-- **Netlify**: Drag and drop deployment
+- **Netlify**: Drag-and-drop deployment
 - **Vercel**: Git-based deployment
 - **GitHub Pages**: Direct from repository
 - **Firebase Hosting**: Google Cloud integration
@@ -231,7 +231,7 @@ Each page should include:
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Your page description">
 <meta name="keywords" content="thermal, simulation, engineering">
-<meta name="author" content="Phoenix simulation">
+<meta name="author" content="Phoenix Simulation">
 ```
 
 ### Performance Optimization
