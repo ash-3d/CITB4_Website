@@ -145,21 +145,21 @@
             <div class="estimator-inputs">
               <div class="form-row">
                 <div class="form-group">
-                  <label for="df">Df - Diameter of filament (mm)</label>
+                  <label for="df">Diameter of filament (mm)</label>
                   <input type="number" id="df" step="0.01" placeholder="e.g., 1.75" required />
                 </div>
                 <div class="form-group">
-                  <label for="lf">Lf - Length of filament (mm)</label>
+                  <label for="lf">Length of filament used for the part (mm)</label>
                   <input type="number" id="lf" step="0.01" placeholder="e.g., 5000" required />
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group">
-                  <label for="dn">Dn - Diameter of nozzle (mm)</label>
+                  <label for="dn">Diameter of nozzle (mm)</label>
                   <input type="number" id="dn" step="0.01" placeholder="e.g., 0.4" required />
                 </div>
                 <div class="form-group">
-                  <label for="h">h - Layer/slice height (mm)</label>
+                  <label for="h">Layer/slice height (mm)</label>
                   <input type="number" id="h" step="0.01" placeholder="e.g., 0.2" required />
                 </div>
               </div>
@@ -226,7 +226,7 @@
           const _0x6c2f = (_0x3d4e * _0x4a2b[2]) / _0x4a2b[1];
           const _0x7b3a = _0x6c2f * _0x4a2b[0];
 
-          resultText.innerHTML = `Your approximate simulation price is <strong>$${_0x7b3a.toFixed(2)}</strong> + applicable taxes`;
+          resultText.innerHTML = `Your approximate simulation price is <strong>€${_0x7b3a.toFixed(2)}</strong> + applicable taxes`;
           resultContainer.style.display = "block";
           resultContainer.scrollIntoView({ behavior: "smooth", block: "nearest" });
         });
