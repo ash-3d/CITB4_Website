@@ -33,6 +33,7 @@
         <nav class="main-nav" id="main-nav">
           <ul>
             <li><a href="#">Home</a></li>
+            <li><a href="#price-estimator">Price Estimator</a></li>
             <li><a href="src/pages/technology.html">Technology</a></li>
             <li>
               <a
@@ -139,7 +140,7 @@
         </div>
 
         <!-- Cost Estimation section -->
-        <section class="cost-estimator">
+        <section id="price-estimator" class="cost-estimator">
           <h2>Estimate your simulation cost</h2>
           <div class="estimator-container">
             <div class="estimator-inputs">
@@ -216,17 +217,23 @@
             return;
           }
 
-          const _0x4a2b = [0x2, 0xF4240, 6.2832];
-          const _0x5f1c = (a, b, c, d) => {
-            const x = Math.pow(a, _0x4a2b[0]) * b;
-            const y = c * d;
-            return x / y;
+          const _0x21a6 = [
+            "pow",
+            "0x2",
+            "0.0000213629",
+            "toFixed",
+            "innerHTML"
+          ];
+          const _0x54b6 = (a, b, c, d) => {
+            const m = Math[_0x21a6[0]](a, parseInt(_0x21a6[1], 16));
+            return (m * b) / (c * d);
           };
-          const _0x3d4e = _0x5f1c(df, lf, dn, h);
-          const _0x6c2f = (_0x3d4e * _0x4a2b[2]) / _0x4a2b[1];
-          const _0x7b3a = _0x6c2f * _0x4a2b[0];
+          const _0x3b5c = _0x54b6(df, lf, dn, h);
+          const _0x4606 = _0x3b5c * parseFloat(_0x21a6[2]);
 
-          resultText.innerHTML = `Your approximate simulation price is <strong>€${_0x7b3a.toFixed(2)}</strong> + applicable taxes`;
+          resultText[_0x21a6[4]] = `Your approximate simulation price is <strong>€${_0x4606[
+            _0x21a6[3]
+          ](2)}</strong> + applicable taxes`;
           resultContainer.style.display = "block";
           resultContainer.scrollIntoView({ behavior: "smooth", block: "nearest" });
         });
